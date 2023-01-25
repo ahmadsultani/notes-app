@@ -10,18 +10,19 @@ class NoteInput extends React.Component {
     this.state = {
       title: "",
       body: "",
-      charLeft: 150,
     };
     this.onTitleChange = this.onTitleChange.bind(this);
     this.onBodyChange = this.onBodyChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
   onTitleChange = (event) => {
-    if (this.state.charLeft <= 0) return;
     const { value } = event.target;
+    if (value.length > 150) {
+      alert("Title cannot be longer than 150 characters!");
+      return;
+    }
     this.setState({
       title: value,
-      charLeft: 150 - value.length,
     });
   };
   onBodyChange = (event) => {
@@ -32,6 +33,15 @@ class NoteInput extends React.Component {
   onSubmit = () => {
     const { onAddNote } = this.props;
     const { title, body } = this.state;
+    if (title === "" || body === "") {
+      if (title === "") {
+        alert("Title cannot be empty!");
+      }
+      if (body === "") {
+        alert("Body cannot be empty!");
+      }
+      return
+    }
     onAddNote({
       id: new Date(),
       title,
@@ -42,19 +52,17 @@ class NoteInput extends React.Component {
     this.setState({
       title: "",
       body: "",
-      charLeft: 150,
     });
     alert("Note Added!");
   };
   render() {
-    const { title, charLeft, body } = this.state;
+    const { title, body } = this.state;
     return (
       <div className={styles.container}>
         <h1 className={styles.header}>Add a Note!</h1>
         <NoteTitleInput
           title={title}
           onTitleChange={this.onTitleChange}
-          charLeft={charLeft}
         />
         <textarea
           className={styles.bodyInput}
