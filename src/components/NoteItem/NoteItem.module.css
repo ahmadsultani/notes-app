@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(100% / 3 - 20px);
+  width: calc(100% / 3 - 20px);
+  padding: 20px;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: 1px solid black;
+  gap: 16px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.content p {
+  width: 100%;
+  text-align: justify;
+}
+
+.cardButtons {
+  display: flex;
+  align-self: end;
+  gap: 8px;
+  align-items: center;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+}

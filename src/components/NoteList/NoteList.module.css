@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container h1 {
+  padding: 0 16px;
+}
+
+.noteContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.noNotes {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.noNotes span {
+  font-weight: 600;
+  text-decoration: underline;
+}

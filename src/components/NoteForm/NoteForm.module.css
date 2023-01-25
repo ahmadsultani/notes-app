@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 45%;
+  gap: 16px;
+  border: 2px solid black;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.header {
+  font-size: 36px;
+  text-align: left;
+  margin-bottom: -14px;
+}
+
+.bodyInput {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+  outline: none;
+}
+
+.submit {
+  align-self: flex-end;
+  padding: 6px 24px;
+}

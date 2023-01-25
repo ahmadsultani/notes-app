@@ -1,0 +1,8 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px;
+  padding-top: calc(80px + 32px);
+}

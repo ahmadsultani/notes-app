@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.charLeft {
+  align-self: flex-end;
+  padding: 0 8px;
+  font-size: 14px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.input:disabled {
+  background-color: #f0f0f0;
+}
